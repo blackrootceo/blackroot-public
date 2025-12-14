@@ -1,0 +1,8 @@
+## Kernel build commands
+
+make mrproper               #clean the build directory
+make defconfig              #copy the default configuration to your new .config file
+make menuconfig             #add more options to your kernel eithrer modules (M) or inbuild (x) use space, enter to naviagate the ncurses windows /menu
+make -j$(nproc)             #build the kernel
+sudo make build_install     #build the modules and install them at /lib/modules/yourlinuxkernel
+sudo make install           #install the vmlinuz and initramfs in /boot
